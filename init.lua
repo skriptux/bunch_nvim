@@ -1,5 +1,11 @@
+-- Menu:
+-- ++++colorscheme
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+
+vim.opt.spell = true
+vim.opt.spelllang = { 'en', 'ru' }
 
 vim.g.have_nerd_font = false
 vim.opt.number = true
@@ -49,7 +55,8 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-  { import = 'plugins' }
-
+  { import = 'plugins' },
 })
+
+-- ++++colorscheme
+vim.cmd [[colorscheme tokyonight]]
